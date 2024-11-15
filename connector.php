@@ -1,11 +1,6 @@
 <?php
-    $mysqli = new mysqli("127.0.0.1" , 
-              "root" , 
-              "" , 
-              "test");
-
-    if ($mysqli -> connect_errno) {
-        echo "Failed to connect to MySQL: " . $mysqli -> connect_error;
-        exit();
-      }
+    //koneksikan PHP dengan MySQL
+    
+    $conn = mysqli_conect("127.0.0.1" , "root" , "");
+    $db = mysqli_select_db($conn, 'test');
 ?>
