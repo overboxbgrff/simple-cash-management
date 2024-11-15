@@ -1,4 +1,5 @@
 <?php
+    //inisialisasi koneksi
     require 'connector.php';
     session_start();
     $error_msg = "";
@@ -6,7 +7,7 @@
     //proses login
     if (isset($_POST['login'])){
         if(empty($_POST['uname']) || empty($_POST['passwd'])){
-            $error_msg = "USERNAME DAN PASSWORD KOSOSNG!"
+            $error_msg = "USERNAME DAN PASSWORD KOSOSNG!";
         } else {
             $uname = $_POST['uname'];
             $passwd = $_POST['passwd'];
