@@ -32,7 +32,7 @@
             <div class="col-sm-4"></div>
             <div class="col-sm-4 card d-grid gap-2 col-11 mx-auto">
                 <div class="card-body">
-                    <h3><center><i class="fa-solid fa-money-bill"></i> Cash Management</center></h3>
+                    <h3><center><i class="fa-solid fa-money-bill-transfer"></i> Cash Management</center></h3>
                 </div>
             </div>
             <div class="col-sm-4"></div>
