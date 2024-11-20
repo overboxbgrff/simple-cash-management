@@ -10,4 +10,11 @@
     mysqli_close($conn);
     header("location: login.php");
   }
+  if ($uname == "admin"){
+    $kode_manager = "";
+    $status_kode = "";
+  } else {
+    $kode_manager = "disabled";
+    $status_kode = " (Khusus Admin)";
+  }
  ?>
