@@ -1,25 +1,25 @@
 <?php
     require_once "connector.php";
-    require_once "session.php"
+    require_once "session.php";
 
-    //pagination section
-
-    
+    //blokir page jika bukan admin
+    if ($uname != "admin"){
+        header("location: homepage.php");
+    }
 ?>
 
-<!--HTML SECTION-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cash Management - Home</title>
+    <title>Document</title>
 </head>
 
-    <!-- BS Initialize-->
+<!-- BS Initialize-->
     <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
-    <!-- FA Initialize -->
+<!-- FA Initialize -->
     <script src="lib/font-awesome/js/solid.min.js"></script>
     <script src="lib/font-awesome/js/fontawesome.min.js"></script>
     <script src="lib/font-awesome/js/brands.min.js"></script>
@@ -78,48 +78,9 @@
             </div>
         </div>
     </nav>
-
     <br>
-
     <!--content-->
     <div class="container">
-        <div class="row">
-            <div class="col-sm-12">
-                <h1 class="fst-italic">Halo, <?php echo $user_name;?>!</h1>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-sm-12" style="padding:4px;">
-                <div class="card text-bg-warning">
-                    <div class="card-header"><h5>Testing</h5></div>
-                    <div class="card-body">
-                        <p class="card-text">Sebagian fitur masih belum tersedia dan masih berupa placeholder.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-
-            <div class="col-sm-6" style="padding:4px;">
-                <div class="card">
-                    <div class="card-body">
-                        <h3 class="text-success"><i class="fa-solid fa-cash-register"> </i> Pemasukan</h3>
-                        <h3 class="text-success">Rp. 9.xxx.xxx</h3>
-                        <a href="#" class="text-decoration-none fst-italic text-success">Atur Pemasukan <i class="fa-solid fa-chevron-right"></i></a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-sm-6" style="padding:4px;">
-                <div class="card">
-                    <div class="card-body">
-                        <h3 class="text-danger"><i class="fa-solid fa-hand-holding-dollar"></i> Pengeluaran</h3>
-                        <h3 class="text-danger">Rp. 9.xxx.xxx</h3>
-                        <a href="#" class="text-decoration-none fst-italic text-danger">Atur Pengeluaran <i class="fa-solid fa-chevron-right"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
         
     </div>
 </body>
