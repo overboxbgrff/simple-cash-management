@@ -6,11 +6,12 @@
   $row = mysqli_fetch_array($query);
   $user_name = $row['fullname'];
   $uname = $row['uname'];
+  $priv = $row['priv'];
   if (!isset($user_name)) {
     mysqli_close($conn);
     header("location: login.php");
   }
-  if ($uname == "admin"){
+  if ($priv == "Administrator"){
     $kode_manager = "";
     $status_kode = "";
   } else {

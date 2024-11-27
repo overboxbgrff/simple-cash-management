@@ -3,7 +3,7 @@
 ?>
 
 <!DOCTYPE html>
-<html lang="en" data-bs-theme="dark">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -30,7 +30,7 @@
         <!--LOGIN TITLE CARD-->
         <div class="row">
             <div class="col-sm-4"></div>
-            <div class="col-sm-4 card d-grid gap-2 col-11 mx-auto">
+            <div class="col-sm-4 card bg-primary text-white d-grid gap-2 col-11 mx-auto">
                 <div class="card-body">
                     <h3><center><i class="fa-solid fa-money-bill-transfer"></i> Cash Management</center></h3>
                 </div>
@@ -42,7 +42,7 @@
         <!--LOGIN FORM CARD-->
         <div class="row">
             <div class="col-sm-4"></div>
-            <div class="col-sm-4 card d-grid gap-2 col-11 mx-auto">
+            <div class="col-sm-4 card border-primary d-grid gap-2 col-11 mx-auto">
                 <form action="" method="post">
                     <br>
                     <div class="form-group">
@@ -74,9 +74,9 @@
 
         <div class="row">
             <div class="col-sm-4"></div>
-            <div class="col-sm-4 card bg-danger d-grid gap-2 col-11 mx-auto">
+            <div class="col-sm-4 card bg-danger text-white d-grid gap-2 col-11 mx-auto">
                 <div class="card-body">
-                    <p><center>2024 - Kelompok 1 Capstone Project</center></p>
+                    <p><center><b>2024 - Kelompok 1 Capstone Project</b></center></p>
                     <p><center>In Development</center></p>
                 </div>
             </div>

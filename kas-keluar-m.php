@@ -3,7 +3,7 @@
     require_once "session.php";
 
     //blokir page jika bukan admin
-    if ($uname != "admin"){
+    if ($priv != "Administrator"){
         header("location: homepage.php");
     }
 ?>
@@ -81,7 +81,7 @@
     <br>
     <!--content-->
     <div class="container">
-
+        <h1>Halo, <?php echo $user_name.", ".$priv;?></h1>
     </div>
 </body>
 </html>
