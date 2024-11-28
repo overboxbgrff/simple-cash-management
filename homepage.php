@@ -24,7 +24,7 @@
     <script src="lib/font-awesome/js/fontawesome.min.js"></script>
     <script src="lib/font-awesome/js/brands.min.js"></script>
 
-<body>
+<body style="background-color: rgb(81, 50, 252);">
     <!--navbar-->
     <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
 
@@ -42,8 +42,8 @@
                             <i class="fa-solid fa-receipt"> </i> Kas
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a href="kas-masuk.php" class="dropdown-item"><i class="fa solid fa-cash-register"> </i> Kas Pemasukan</a></li>
-                            <li><a href="kas-keluar.php" class="dropdown-item"><i class="fa-solid fa-hand-holding-dollar"> </i> Kas Pengeluaran</a></li>                            
+                            <li><a href="page-kas-masuk/kas-masuk.php" class="dropdown-item"><i class="fa solid fa-cash-register"> </i> Kas Pemasukan</a></li>
+                            <li><a href="page-kas-keluar/kas-keluar.php" class="dropdown-item"><i class="fa-solid fa-hand-holding-dollar"> </i> Kas Pengeluaran</a></li>                            
                             <li><hr class="dropdown-divider"></li>
                             <li><a href="rekap-kas.php" class="dropdown-item"><i class="fa-solid fa-box-archive"> </i> Rekap</a></li>
                             <li><a href="print-lapor.php" class="dropdown-item"><i class="fa-solid fa-print"> </i> Cetak</a></li>
@@ -56,13 +56,19 @@
                         </a>
                         <ul class="dropdown-menu">
                             <li>
-                                <a href="kas-masuk-m.php" class="dropdown-item <?php echo $kode_manager;?>">
+                                <a href="page-kas-masuk/kas-masuk-m.php" class="dropdown-item <?php echo $kode_manager;?>">
                                     <i class="fa-solid fa-file-pen"> </i> Kode Kas Masuk <?php echo $status_kode;?>
                                 </a>
                             </li>
                             <li>
-                                <a href="kas-keluar-m.php" class="dropdown-item <?php echo $kode_manager;?>">
+                                <a href="page-kas-keluar/as-keluar-m.php" class="dropdown-item <?php echo $kode_manager;?>">
                                     <i class="fa-solid fa-file-pen"> </i> Kode Kas Keluar <?php echo $status_kode;?>
+                                </a>
+                            </li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li>
+                                <a href="page-user/user-man.php" class="dropdown-item <?php echo $kode_manager;?>">
+                                    <i class="fa-solid fa-user-pen"> </i> User <?php echo $status_kode;?>
                                 </a>
                             </li>
                         </ul>
@@ -85,12 +91,12 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-12">
-                <h1 class="fst-italic">Halo, <?php echo $user_name;?>!</h1>
+                <h1 class="fst-italic text-white">Halo, <?php echo $user_name;?>!</h1>
             </div>
         </div>
         <div class="row">
             <div class="col-sm-12" style="padding:4px;">
-                <div class="card text-bg-warning">
+                <div class="card text-bg-warning border-light">
                     <div class="card-header"><h5>Testing</h5></div>
                     <div class="card-body">
                         <p class="card-text">Sebagian fitur masih belum tersedia dan masih berupa placeholder.</p>
@@ -101,21 +107,21 @@
         <div class="row">
 
             <div class="col-sm-6" style="padding:4px;">
-                <div class="card">
+                <div class="card text-bg-success border-light">
                     <div class="card-body">
-                        <h3 class="text-success"><i class="fa-solid fa-cash-register"> </i> Pemasukan</h3>
-                        <h3 class="text-success">Rp. 9.xxx.xxx</h3>
-                        <a href="#" class="text-decoration-none fst-italic text-success">Atur Pemasukan <i class="fa-solid fa-chevron-right"></i></a>
+                        <h3 class=""><i class="fa-solid fa-cash-register"> </i> Pemasukan</h3>
+                        <h3 class="">Rp. 9.xxx.xxx</h3>
+                        <a href="page-kas-masuk/kas-masuk.php" class="text-decoration-none fst-italic text-white">Atur Pemasukan <i class="fa-solid fa-chevron-right"></i></a>
                     </div>
                 </div>
             </div>
 
             <div class="col-sm-6" style="padding:4px;">
-                <div class="card">
+                <div class="card text-bg-danger border-light">
                     <div class="card-body">
-                        <h3 class="text-danger"><i class="fa-solid fa-hand-holding-dollar"></i> Pengeluaran</h3>
-                        <h3 class="text-danger">Rp. 9.xxx.xxx</h3>
-                        <a href="#" class="text-decoration-none fst-italic text-danger">Atur Pengeluaran <i class="fa-solid fa-chevron-right"></i></a>
+                        <h3 class=""><i class="fa-solid fa-hand-holding-dollar"></i> Pengeluaran</h3>
+                        <h3 class="">Rp. 9.xxx.xxx</h3>
+                        <a href="page-kas-keluar/kas-keluar.php" class="text-decoration-none fst-italic text-white">Atur Pengeluaran <i class="fa-solid fa-chevron-right"></i></a>
                     </div>
                 </div>
             </div>

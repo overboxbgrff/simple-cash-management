@@ -18,7 +18,7 @@
 <script src="lib/font-awesome/js/fontawesome.min.js"></script>
 <script src="lib/font-awesome/js/brands.min.js"></script>
 
-<body>
+<body style="background-color: rgb(81, 50, 252);">
     <br><br><br>
     <div class="container">
         <div class="row">
@@ -30,7 +30,7 @@
         <!--LOGIN TITLE CARD-->
         <div class="row">
             <div class="col-sm-4"></div>
-            <div class="col-sm-4 card bg-primary text-white d-grid gap-2 col-11 mx-auto">
+            <div class="col-sm-4 card border-primary text-primary d-grid gap-2 col-11 mx-auto">
                 <div class="card-body">
                     <h3><center><i class="fa-solid fa-money-bill-transfer"></i> Cash Management</center></h3>
                 </div>
@@ -77,7 +77,6 @@
             <div class="col-sm-4 card bg-danger text-white d-grid gap-2 col-11 mx-auto">
                 <div class="card-body">
                     <p><center><b>2024 - Kelompok 1 Capstone Project</b></center></p>
-                    <p><center>In Development</center></p>
                 </div>
             </div>
             <div class="col-sm-4"></div>

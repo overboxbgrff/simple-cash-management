@@ -7,7 +7,7 @@
     //proses login
     if (isset($_POST['login'])){
         if(empty($_POST['uname']) || empty($_POST['passwd'])){
-            $error_msg = "USERNAME DAN PASSWORD KOSOSNG!";
+            $error_msg = "USERNAME DAN PASSWORD KOSONG!";
         } else {
             $uname = $_POST['uname'];
             $passwd = $_POST['passwd'];
@@ -23,7 +23,7 @@
                 $_SESSION['login_user'] = $uname;
                 header('location: homepage.php');
             }else{
-                $error = "Username atau Password Salah....";
+                $error_msg = "Username atau Password Salah!";
             }
             mysqli_close($conn);
         }
