@@ -3,8 +3,6 @@
     require_once "session.php"
 
     //pagination section
-
-    
 ?>
 
 <!--HTML SECTION-->
@@ -61,7 +59,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="page-kas-keluar/as-keluar-m.php" class="dropdown-item <?php echo $kode_manager;?>">
+                                <a href="page-kas-keluar/kas-keluar-m.php" class="dropdown-item <?php echo $kode_manager;?>">
                                     <i class="fa-solid fa-file-pen"> </i> Kode Kas Keluar <?php echo $status_kode;?>
                                 </a>
                             </li>
