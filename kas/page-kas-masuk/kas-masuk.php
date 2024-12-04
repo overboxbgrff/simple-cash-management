@@ -10,7 +10,7 @@
     $pages = (isset($_GET['pages'])) ? (int)$_GET['pages'] : 1;
     $start_pages = ($pages > 1) ? ($pages * $data_pages) - $data_pages : 0;
     $total = mysqli_num_rows($query);
-    $hal = ceil($total/$data_pages)
+    $hal = ceil($total/$data_pages);
 ?>
 
 <!DOCTYPE html>

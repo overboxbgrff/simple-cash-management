@@ -95,7 +95,7 @@
         <div class="row">
             <div class="col-sm-12" style="padding:4px;">
                 <div class="card text-bg-warning border-light">
-                    <div class="card-header"><h5>Testing</h5></div>
+                    <div class="card-header"><h3>Testing</h3></div>
                     <div class="card-body">
                         <p class="card-text">Sebagian fitur masih belum tersedia dan masih berupa placeholder.</p>
                     </div>
@@ -103,22 +103,33 @@
             </div>
         </div>
         <div class="row">
-
+            <?php
+                $mQuery = mysqli_query($conn,"SELECT SUM(jumlah_km) FROM kas_masuk");
+                while ($rmasuk = mysqli_fetch_array($mQuery)) {
+                    $kmasuk = $rmasuk['SUM(jumlah_km)'];
+                }
+            ?>
             <div class="col-sm-6" style="padding:4px;">
                 <div class="card text-bg-success border-light">
                     <div class="card-body">
                         <h3 class=""><i class="fa-solid fa-cash-register"> </i> Pemasukan</h3>
-                        <h3 class="">Rp. 9.xxx.xxx</h3>
+                        <h3 class="">Rp. <?php echo number_format($kmasuk, 2, ",", ".");?></h3>
                         <a href="page-kas-masuk/kas-masuk.php" class="text-decoration-none fst-italic text-white">Atur Pemasukan <i class="fa-solid fa-chevron-right"></i></a>
                     </div>
                 </div>
             </div>
-
+            
+            <?php
+                $kQuery = mysqli_query($conn,"SELECT SUM(jumlah_kk) FROM kas_keluar");
+                while ($rkeluar = mysqli_fetch_array($kQuery)) {
+                    $kkeluar = $rkeluar['SUM(jumlah_kk)'];
+                }
+            ?>
             <div class="col-sm-6" style="padding:4px;">
                 <div class="card text-bg-danger border-light">
                     <div class="card-body">
                         <h3 class=""><i class="fa-solid fa-hand-holding-dollar"></i> Pengeluaran</h3>
-                        <h3 class="">Rp. 9.xxx.xxx</h3>
+                        <h3 class="">Rp. <?php echo number_format($kkeluar, 2, ",", ".");?></h3>
                         <a href="page-kas-keluar/kas-keluar.php" class="text-decoration-none fst-italic text-white">Atur Pengeluaran <i class="fa-solid fa-chevron-right"></i></a>
                     </div>
                 </div>

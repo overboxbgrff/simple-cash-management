@@ -1,5 +1,6 @@
 <?php
   session_start();
+  $root = realpath($_SERVER['DOCUMENT_ROOT']);
   require_once 'connector.php';
   $usercheck = $_SESSION['login_user'];
   $query = mysqli_query($conn, "select * from user where uname = '".$usercheck."'");
@@ -9,7 +10,7 @@
   $priv = $row['priv'];
   if (!isset($user_name)) {
     mysqli_close($conn);
-    header("location: login.php");
+    header("location: /kas/login.php");
   }
   if ($priv == "Administrator"){
     $kode_manager = "";

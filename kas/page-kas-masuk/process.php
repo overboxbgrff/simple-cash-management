@@ -63,13 +63,13 @@
         $jumlah_km = mysqli_real_escape_string($conn,stripslashes($jumlah_km));
         $input_km = mysqli_query($conn, "INSERT INTO kas_masuk (id_kkm, tanggal_km, kode_km, uraian_km, jumlah_km)
                                      VALUES ('$kode_kkm','$tanggal_km','$kode_km', '$uraian_km','$jumlah_km')");
-                                                    
+        mysqli_close($conn);                                                            
         if($input_km){
             header('location:kas-masuk.php');
         } else{
             echo "GAGAL";   
         }
-        mysqli_close($conn);
+        
     } elseif ($_GET['act'] == 'hapus_kas') {
         $id_kkm = $_GET['id'];
         $hapus_kkm = mysqli_query($conn,"DELETE FROM kas_masuk WHERE id_kkm='$id_kkm'");
@@ -89,6 +89,9 @@
         $uraian_km = mysqli_real_escape_string($conn,stripslashes($uraian_km));
         $jumlah_km = mysqli_real_escape_string($conn,stripslashes($jumlah_km));
         $edit_kas = mysqli_query($conn,"UPDATE kas_masuk SET
+                                tanggal_km='$tanggal_km', kode_km='$kode_km', uraian_km='$uraian_km', jumlah_km='$jumlah_km'
+                                WHERE id_kkm='$id_kkm'");
+        $edit_lapor = mysqli_query($conn,"UPDATE kas_masuk SET
                                 tanggal_km='$tanggal_km', kode_km='$kode_km', uraian_km='$uraian_km', jumlah_km='$jumlah_km'
                                 WHERE id_kkm='$id_kkm'");
         if($edit_kas){

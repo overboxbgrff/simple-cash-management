@@ -5,7 +5,7 @@
 
     //blokir page jika bukan admin
     if ($priv != "Administrator"){
-        header("location: homepage.php");
+        header("location: ../login.php");
     }
 
     $query = mysqli_query($conn,"select * from jenis_kk");
