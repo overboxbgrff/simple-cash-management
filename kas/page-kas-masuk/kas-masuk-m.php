@@ -10,7 +10,7 @@
     $query = mysqli_query($conn,"select * from jenis_km");
 
     //pagination
-    $data_pages = 10;
+    $data_pages = 5;
     $pages = (isset($_GET['pages'])) ? (int)$_GET['pages'] : 1;
     $start_pages = ($pages > 1) ? ($pages * $data_pages) - $data_pages : 0;
     $total = mysqli_num_rows($query);

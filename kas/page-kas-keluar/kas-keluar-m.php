@@ -242,7 +242,7 @@
                                                                     </div>
                                                                     <div class="modal-footer">
                                                                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"><i class="fa-solid fa-xmark"> </i> Batal</button>
-                                                                        <button type="submit" name="submit" class="btn btn-primary"><i class="fa-solid fa-plus"> </i> Tambah Data</button>
+                                                                        <button type="submit" name="submit" class="btn btn-primary"><i class="fa-solid fa-pen-to-square"> </i> Edit Data</button>
                                                                     </div>
                                                                 </form>
                                                             </div>                                                            

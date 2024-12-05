@@ -8,7 +8,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Cash Management - Cetak Rekap Kas</title>
 </head>
 <!-- BS Initialize-->
 <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -148,9 +148,8 @@
                             <h5 class="text-center">Alamat Kantor. No. Telp Kantor</h5>
                             <h5 class="text-center">Kontak Lainnya</h5>
                             <hr>
-                            <br>
                             <h5 class="text-uppercase text-center">KAS UMUM</h5>
-                            <p class="text-center"><?php echo strftime("%d %B %Y", strtotime($start));; ?> s/d <?php echo strftime("%d %B %Y", strtotime($end));; ?></p>
+                            <p class="text-center"><?php echo strftime("%d %B %Y", strtotime($start)); ?> s/d <?php echo strftime("%d %B %Y", strtotime($end));; ?></p>
                             <br>
                             <div class="table-responsive">
                                 <table class="table table-bordered">
@@ -201,12 +200,33 @@
                                             <?php
                                                 }
                                             ?>
-                                                <tr>
-                                                    <td colspan="3" class="text center"><b>Jumlah</b></td>
-                                                    <td class="fw-bold"><?php echo "Rp. ".number_format($t_masuk,2,",",".");?></td>
-                                                    <td class="fw-bold"><?php echo "Rp. ".number_format($t_keluar,2,",",".");?></td>
-                                                    <td class="fw-bold"><?php echo "Rp. ".number_format($total,2,",",".");?></td>
-                                                </tr>
+                                                    <tr>
+                                                        <td colspan="3" class="text center"><b>Jumlah</b></td>
+                                                        <td class="fw-bold"><?php echo "Rp. ".number_format($t_masuk,2,",",".");?></td>
+                                                        <td class="fw-bold"><?php echo "Rp. ".number_format($t_keluar,2,",",".");?></td>
+                                                        <td class="fw-bold"><?php echo "Rp. ".number_format($total,2,",",".");?></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            <div class="d-flex justify-content-between">
+                                                <div class="col-md-4">
+                                                    <p class="text-center fw-bold invisible" ><?php echo strftime("%A, %d %B %Y");?></p>
+                                                    <p class="text-center fw-bold">(Contoh Jabatan)</p>
+                                                    <br><br><br><br>
+                                                    <p class="text-center fw-bold">(Contoh Nama)</p>
+                                                    
+                                                </div>
+                                                <div class="col-md-4">
+                                                    
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <p class="text-center fw-bold">(Kota), <?php echo strftime("%d %B %Y");?></p>
+                                                    <p class="text-center fw-bold">(Contoh Jabatan)</p>
+                                                    <br><br><br><br>
+                                                    <p class="text-center fw-bold">(Contoh Nama)</p>
+                                                    
+                                                </div>
+                                            </div>
                                             <?php
                                             } else {
                                                 ?>
@@ -214,11 +234,8 @@
                                                 <h3 class="text-center fst-italic">Pilih tanggal awal dan akhir periode kas yang ingin dicetak.</h3>
                                                 <br><br>
                                                 <?php
-                                            }
-                                            
+                                            } 
                                         ?>
-                                        </tbody>
-                                    </table>
                             </div>
                         </div>
                         
