@@ -55,11 +55,11 @@
                             <i class="fa-solid fa-receipt"> </i> Kas
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a href="kas-masuk.php" class="dropdown-item"><i class="fa solid fa-cash-register"> </i> Kas Pemasukan</a></li>
-                            <li><a href="kas-keluar.php" class="dropdown-item"><i class="fa-solid fa-hand-holding-dollar"> </i> Kas Pengeluaran</a></li>                            
+                            <li><a href="../page-kas-masuk/kas-masuk.php" class="dropdown-item"><i class="fa solid fa-cash-register"> </i> Kas Pemasukan</a></li>
+                            <li><a href="../page-kas-keluar/kas-keluar.php" class="dropdown-item"><i class="fa-solid fa-hand-holding-dollar"> </i> Kas Pengeluaran</a></li>                            
                             <li><hr class="dropdown-divider"></li>
-                            <li><a href="rekap-kas.php" class="dropdown-item"><i class="fa-solid fa-box-archive"> </i> Rekap</a></li>
-                            <li><a href="print-lapor.php" class="dropdown-item"><i class="fa-solid fa-print"> </i> Cetak</a></li>
+                            <li><a href="../rekap-kas.php" class="dropdown-item"><i class="fa-solid fa-box-archive"> </i> Rekap</a></li>
+                            <li><a href="../print-lapor.php" class="dropdown-item"><i class="fa-solid fa-print"> </i> Cetak</a></li>
                         </ul>
                     </li>
 
@@ -69,12 +69,12 @@
                         </a>
                         <ul class="dropdown-menu">
                             <li>
-                                <a href="kas-masuk-m.php" class="dropdown-item <?php echo $kode_manager;?>">
+                                <a href="../page-kas-masuk/kas-masuk-m.php" class="dropdown-item <?php echo $kode_manager;?>">
                                     <i class="fa-solid fa-file-pen"> </i> Kode Kas Masuk <?php echo $status_kode;?>
                                 </a>
                             </li>
                             <li>
-                                <a href="kas-keluar-m.php" class="dropdown-item <?php echo $kode_manager;?>">
+                                <a href="../page-kas-keluar/kas-keluar-m.php" class="dropdown-item <?php echo $kode_manager;?>">
                                     <i class="fa-solid fa-file-pen"> </i> Kode Kas Keluar <?php echo $status_kode;?>
                                 </a>
                             </li>
@@ -90,7 +90,7 @@
                 </ul>
 
                 <ul class="navbar-nav d-flex">
-                    <li class="nav-item"><a href="" class="nav-link"><i class="fa-solid fa-circle-info"> </i> About</a></li>
+                    <li class="nav-item"><a href="../about.php" class="nav-link"><i class="fa-solid fa-circle-info"> </i> About</a></li>
                     <li class="nav-item"><a href="../logout.php" class="nav-link text-danger"><i class="fa-solid fa-right-from-bracket"></i> Logout</a></li>
                 </ul>
 

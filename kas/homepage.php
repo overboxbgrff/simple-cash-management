@@ -75,7 +75,7 @@
                 </ul>
 
                 <ul class="navbar-nav d-flex">
-                    <li class="nav-item"><a href="" class="nav-link"><i class="fa-solid fa-circle-info"> </i> About</a></li>
+                    <li class="nav-item"><a href="about.php" class="nav-link"><i class="fa-solid fa-circle-info"> </i> About</a></li>
                     <li class="nav-item"><a href="logout.php" class="nav-link text-danger"><i class="fa-solid fa-right-from-bracket"></i> Logout</a></li>
                 </ul>
 
@@ -84,6 +84,18 @@
     </nav>
 
     <br>
+
+    <?php
+                $mQuery = mysqli_query($conn,"SELECT SUM(jumlah_km) FROM kas_masuk");
+                while ($rmasuk = mysqli_fetch_array($mQuery)) {
+                    $kmasuk = $rmasuk['SUM(jumlah_km)'];
+                }
+                $kQuery = mysqli_query($conn,"SELECT SUM(jumlah_kk) FROM kas_keluar");
+                while ($rkeluar = mysqli_fetch_array($kQuery)) {
+                    $kkeluar = $rkeluar['SUM(jumlah_kk)'];
+                }
+                $saldo = $kmasuk - $kkeluar;
+    ?>
 
     <!--content-->
     <div class="container">
@@ -102,13 +114,20 @@
                 </div>
             </div>
         </div>
+
         <div class="row">
-            <?php
-                $mQuery = mysqli_query($conn,"SELECT SUM(jumlah_km) FROM kas_masuk");
-                while ($rmasuk = mysqli_fetch_array($mQuery)) {
-                    $kmasuk = $rmasuk['SUM(jumlah_km)'];
-                }
-            ?>
+            <div class="col-sm-12" style="padding:4px;">
+                <div class="card text-bg-info border-light text-white">
+                    <div class="card-body">
+                        <h3 class=""><i class="fa-solid fa-money-bill"></i> Saldo</h3>
+                        <h3 class="">Rp. <?php echo number_format($saldo, 2, ",", ".");?></h3>
+                        <a href="rekap-kas.php" class="text-decoration-none fst-italic text-white">Rekap Kas <i class="fa-solid fa-chevron-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            
             <div class="col-sm-6" style="padding:4px;">
                 <div class="card text-bg-success border-light">
                     <div class="card-body">
@@ -120,10 +139,7 @@
             </div>
             
             <?php
-                $kQuery = mysqli_query($conn,"SELECT SUM(jumlah_kk) FROM kas_keluar");
-                while ($rkeluar = mysqli_fetch_array($kQuery)) {
-                    $kkeluar = $rkeluar['SUM(jumlah_kk)'];
-                }
+                
             ?>
             <div class="col-sm-6" style="padding:4px;">
                 <div class="card text-bg-danger border-light">

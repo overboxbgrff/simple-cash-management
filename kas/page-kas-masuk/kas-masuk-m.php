@@ -85,7 +85,7 @@
                         </ul>
 
                         <ul class="navbar-nav d-flex">
-                            <li class="nav-item"><a href="" class="nav-link"><i class="fa-solid fa-circle-info"> </i> About</a></li>
+                            <li class="nav-item"><a href="../about.php" class="nav-link"><i class="fa-solid fa-circle-info"> </i> About</a></li>
                             <li class="nav-item"><a href="../logout.php" class="nav-link text-danger"><i class="fa-solid fa-right-from-bracket"></i> Logout</a></li>
                         </ul>
 
