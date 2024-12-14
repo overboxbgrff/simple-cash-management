@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 05, 2024 at 02:48 AM
+-- Generation Time: Dec 14, 2024 at 01:41 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.0.30
 
@@ -91,7 +91,9 @@ CREATE TABLE `kas_keluar` (
 --
 
 INSERT INTO `kas_keluar` (`id_kkk`, `tanggal_kk`, `kode_kk`, `uraian_kk`, `jumlah_kk`) VALUES
-('KK-20241203-130154', '2024-12-03', 'B.A', 'Beban Admin', 15000000);
+('KK-20241203-130154', '2024-12-03', 'B.A', 'Beban Admin', 15000000),
+('KK-20241207-234717', '2024-12-07', 'B.K', 'Pembelian Air Galon', 50000),
+('KK-20241208-001641', '2024-12-08', 'B.A', 'Administrasi', 100000);
 
 -- --------------------------------------------------------
 
@@ -114,7 +116,9 @@ CREATE TABLE `kas_masuk` (
 INSERT INTO `kas_masuk` (`id_kkm`, `tanggal_km`, `kode_km`, `uraian_km`, `jumlah_km`) VALUES
 ('KM-20241203-121913', '2024-12-03', '1-S.A', 'Saldo Awal Bulan', 200000000),
 ('KM-20241203-122244', '2024-10-03', 'S.A', 'Saldo Awal Bulan Oktober', 250000000),
-('KM-20241203-122318', '2024-12-04', 'B.U', 'Bantuan Pemda', 150000000);
+('KM-20241203-122318', '2024-12-04', 'B.U', 'Bantuan Pemda', 150000000),
+('KM-20241207-234636', '2024-12-07', 'K.101', 'Kas Masuk kedua', 10000000),
+('KM-20241208-001628', '2024-12-06', 'K.101', 'Bantuan Eksternal', 10000000);
 
 -- --------------------------------------------------------
 
@@ -152,7 +156,8 @@ CREATE TABLE `user` (
 INSERT INTO `user` (`id_user`, `fullname`, `uname`, `passwd`, `priv`) VALUES
 (1, 'Danang Priyombodo', 'danang', 'YmFuYmFrYXJzYXVzdGlyYW0=', 'Administrator'),
 (2, 'K1 Project Capstone', 'guest', 'cGNrZWwx', 'User'),
-(3, 'Admin', 'admin', 'YWRtaW5wY3NhdHU=', 'Administrator');
+(3, 'Admin', 'admin', 'YWRtaW5wY3NhdHU=', 'Administrator'),
+(5, 'test123', 'test', 'YmFtYmFuZzEyMw==', 'User');
 
 --
 -- Indexes for dumped tables
@@ -208,7 +213,7 @@ ALTER TABLE `jenis_km`
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id_user` int(64) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_user` int(64) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
